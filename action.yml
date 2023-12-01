@@ -13,7 +13,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo the robot goes ${{ github.event.inputs.token }}
+    - run: |
+        echo "the robot goes ${{ github.event.inputs.token }}"
+        echo "androids go ${{ inputs.token }}"
+        echo "roast me a ${{ inputs.token }}, I'll be back by morning"
       shell: bash
     - uses: actions/hello-world-docker-action@main
       with:

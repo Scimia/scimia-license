@@ -13,7 +13,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo 'the robot goes: ${{ secrets.ORG_WIDE_SECRET }}'
+    - run: echo 'the robot goes: ${{ github.event.inputs.token }}'
     - name: My first step
       uses: actions/hello_world@main
       with:

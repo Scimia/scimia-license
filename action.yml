@@ -5,6 +5,7 @@ inputs:
   animal:
     description: which animal Mona is
     default: Mona
+    deprecationMessage: and you should feel bad too
   token:
     description: a token of sorts unknown
     required: true

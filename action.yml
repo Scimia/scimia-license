@@ -15,9 +15,6 @@ runs:
   steps:
     - run: echo the robot goes ${{ github.event.inputs.token }}
       shell: bash
-    - name: My first step
-      uses: actions/hello_world@main
+    - uses: actions/hello-world-docker-action@main
       with:
-        first_name: Mona
-        middle_name: The
-        last_name: ${{ github.event.inputs.animal }}
+        who-to-greet: ${{ github.event.inputs.animal }}

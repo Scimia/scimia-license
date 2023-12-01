@@ -4,6 +4,10 @@ description: "Fetches the Scimia enterprise license for Scimia CI systems"
 inputs:
   animal:
     description: which animal Mona is
+    default: Mona
+  token:
+    description: a token of sorts unknown
+    required: true
 
 runs:
   using: "composite"

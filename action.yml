@@ -14,6 +14,7 @@ runs:
   using: "composite"
   steps:
     - run: echo the robot goes ${{ github.event.inputs.token }}
+      shell: bash
     - name: My first step
       uses: actions/hello_world@main
       with:

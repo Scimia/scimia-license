@@ -1,0 +1,17 @@
+name: "Scimia License"
+description: "Fetches the Scimia enterprise license for Scimia CI systems"
+
+inputs:
+  animal:
+    description: which animal Mona is
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo 'the robot goes: ${{ secrets.ORG_WIDE_SECRET }}'
+    - name: My first step
+      uses: actions/hello_world@main
+      with:
+        first_name: Mona
+        middle_name: The
+        last_name: ${{ github.event.inputs.animal }}
